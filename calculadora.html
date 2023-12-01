@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando valores</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+        body{
+            background-color: darkcyan;
+            color: white;
+            font: normal 25px arial;
+            text-align: center;
+            font-family: 'Nova Square', sans-serif;
+        }
+        div{
+            margin-top: 50px;
+        }
+        input#number1{
+            margin-left: 10px;
+            width: 150px;
+            height: 30px;
+            font-size: 30px;
+            box-shadow: rgb(39, 39, 39) 2px 1px 1px;
+            border-radius: 10px;
+        }
+        input#number2{
+            margin-left: 20px;
+            width: 150px;
+            height: 30px;
+            font-size: 30px;
+            box-shadow: rgb(39, 39, 39) 2px 1px 1px;
+            border-radius: 10px;
+        }
+        input#button{
+            width: 140px;
+            height: 40px;
+            margin-left: 30px;
+            font-size: 30px;
+            font-family: 'Nova Square', sans-serif;
+            box-shadow: rgb(39, 39, 39) 2px 1px 1px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Calculando valores </h1>
+    <input type="number" name="number1" id="number1">
+    <input type="number" name="number2" id="number2">
+<input type="button" id ='button' value="calcular" onclick="calcular()">
+<div id="res1"> Calcule! </div>
+<div id="res2"> </div>
+<div id="res3"> </div>
+<div id="res4"> </div>
+</body>
+<script>
+    function calcular(){
+   var n1 = document.querySelector('input#number1')
+   var n2 = document.querySelector('input#number2')
+   var s1 = Number(n1.value)
+   var s2 = Number(n2.value)
+   var res1 = document.querySelector('div#res1')
+   var res2 = document.querySelector('div#res2')
+   var res3 = document.querySelector('div#res3')
+   var res4 = document.querySelector('div#res4')
+   var r1 = s1+s2
+   var r2 = s1-s2
+   var r3 = s1*s2
+   var r4 = s1/s2
+
+res1.innerHTML = `O resultado da soma entre: ${s1} e ${s2} é: ${r1}`;
+res2.innerHTML = `O resultado da subtração entre: ${s1} e ${s2} é: ${r2}`;
+res3.innerHTML = `O resultado da multiplicação entre: ${s1} e ${s2} é: ${r3}`;
+res4.innerHTML = `O resultado da divisão entre: ${s1} e ${s2} é: ${r4}`;
+
+    }
+
+</script>
+</html>
